@@ -1,29 +1,42 @@
 <template>
 
+
   <!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<title>Aliansi Siber Uin Suska Riau</title>
+	<title>Pweb aku ni</title>
 </head>
 <body>
 	<div class="wrapper">
 			<div class="nav">
 				<div class="logo">
-					logo
+					My Porto
 				</div>
 				<div class="menu">
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="about.html" _blank>About</a></li>
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">Forum</a></li>
-						<li><a href="#">Hall Of Fame</a></li>
+						<router-link
+              to="/"
+              name="fade"
+              class="btn btn-outline border text-secondary">
+              Home
+            </router-link>
+			<router-link
+              to="/about"
+              name="fade"
+              class="btn btn-outline border text-secondary">
+              About
+            </router-link>
+
 					</ul>
 				</div>
 				<div class="header">
+					<div class="typewriter">
 				<h1>Muhammad Zulfikri</h1>
+					</div>
+					<div class="typewriter">
 				<p>Programmer and game developer</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -42,6 +55,7 @@ html,body{
 	margin: 0;
 	padding: 0;
 	width: 100%;
+	
 }
 
 
@@ -55,6 +69,7 @@ body{
 	background-size: cover;
 	display: table;
 	background-attachment: fixed;
+	
 	font-family: montserrat;
 }
 .nav{
@@ -85,6 +100,7 @@ body{
 
 .menu ul{
 	list-style: none;
+	color: #fff;
 }
 
 .menu ul li{
@@ -130,5 +146,39 @@ ul li:nth-child(5) a{
 	color: rgb(207, 207, 207);
 	font-size: 24px;
 	font-weight: lighter;
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+.typewriter p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
 </style>
